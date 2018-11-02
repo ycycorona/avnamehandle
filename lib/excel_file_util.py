@@ -52,7 +52,7 @@ class ExcelFileUtil(object):
             sheet.append([file_obj[th] if th in file_obj else '' for th in table_header_tuple])
         save_files_path = '%s-%s-%d.xlsx' % (base_xls_name, name_prefix, int(time.time()))
         workbook.save(output_path + save_files_path)  # 保存文件
-        return save_files_path
+        return output_path + save_files_path
 
     @staticmethod
     def get_th_from_list(list_1):
