@@ -4,11 +4,11 @@ from lib.excel_file_util import ExcelFileUtil
 import pathlib
 
 
-def get_old_file_name_excel(handle_path, table_header_tuple):
+def get_old_file_name_excel(handle_path, table_header_tuple, out_put_path):
     filtered_files_list = file_name_filter(get_all_file_list(handle_path))
     before_handle_excel_file_path = ExcelFileUtil.save_files_list(
         'av_name', filtered_files_list, table_header_tuple,
-        'before',  str(pathlib.Path.cwd()))  # 保存为excel文件
+        'before',  out_put_path)  # 保存为excel文件
     return before_handle_excel_file_path
 
 
