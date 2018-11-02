@@ -1,5 +1,6 @@
 import re
 import openpyxl
+import pathlib
 # from os import path
 # text = "(DEEP\\'S)(DVDES-808)おっぱいママを狙うマセガキ同級生 4～僕のママが寝取られて妊娠懇願…！！波多野結衣.mkv"
 # extension = str.lower(path.splitext(text)[-1][1:])
@@ -22,5 +23,5 @@ import openpyxl
 # workbook.save('test.xlsx')
 x = 1,2,3
 
-print(len('https://www.t66y.com/'))
+print(pathlib.Path.cwd())
 

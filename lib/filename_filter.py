@@ -1,7 +1,7 @@
 from os import path
 import re
 import copy
-from lib.video_type import video_type
+from config.video_type import video_type
 AV_ID = 'av_id'
 EXTENSION = 'extension'
 pattern = r'(?<=[-_0-9])[a-zA-Z]{2,}-?\d{2,}|[a-zA-Z]{2,}-?\d{2,}'

@@ -1,7 +1,8 @@
 # openpyxl==2.5.9
 import openpyxl
 import time  # 引入time模块
-import re
+import pathlib
+
 
 class ExcelFileUtil(object):
     def __init__(self):
@@ -30,7 +31,7 @@ class ExcelFileUtil(object):
         pass
 
     @classmethod
-    def save_files_list(cls, base_xls_name, files_list, table_header_tuple=None, name_prefix='', output_path='./'):
+    def save_files_list(cls, base_xls_name, files_list, table_header_tuple=None, name_prefix='', output_path=''):
         """
         :keyword 持久化列表到xlsx文件
         :param base_xls_name: 基础文件名
@@ -64,8 +65,24 @@ class ExcelFileUtil(object):
 
 
 if __name__ == '__main__':
+    fl = [{
+        'path': 'F:\\Downloads',
+        'file_name': 'MIGD-630 中出しブラック企業 川村まや.mkv',
+        'av_id': 'MIGD-630',
+        'extension': 'mkv'
+    }, {
+        'path': 'F:\\Downloads',
+        'file_name': 'MXGS-566 肉食系エログラマラス 水沢のの.mp4',
+        'av_id': 'MXGS-566',
+        'extension': 'mp4'
+    }, {
+        'path': 'F:\\Downloads',
+        'file_name': 'NBD-082 お嬢様残酷調教倶楽部 黒木いくみ.mp4',
+
+    }]
     table_header_Tuple = ('av_id', 'file_name', 'path')
     path = r'D:\code\personal\avnamehandle\local_storage\G---before-1540727409.xlsx'
-    excel_file_util = ExcelFileUtil()
-    res_1 = excel_file_util.save_files_list('test', excel_file_util.read_list_form_excel_file(path))
+    print(pathlib.PurePath(path).parent)
+
+    #res_1 = ExcelFileUtil.save_files_list('test', ExcelFileUtil.read_list_form_excel_file(path))
     pass
