@@ -23,5 +23,5 @@ import pathlib
 # workbook.save('test.xlsx')
 x = 1,2,3
 
-print(pathlib.Path.cwd())
+print(str(pathlib.Path.cwd()))
 

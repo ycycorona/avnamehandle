@@ -8,7 +8,7 @@ def get_old_file_name_excel(handle_path, table_header_tuple):
     filtered_files_list = file_name_filter(get_all_file_list(handle_path))
     before_handle_excel_file_path = ExcelFileUtil.save_files_list(
         'av_name', filtered_files_list, table_header_tuple,
-        'before',  pathlib.Path.cwd())  # 保存为excel文件
+        'before',  str(pathlib.Path.cwd()))  # 保存为excel文件
     return before_handle_excel_file_path
 
 
